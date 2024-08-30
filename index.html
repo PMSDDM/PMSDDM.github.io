@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="crossorigin=""/>
+<!-- Make sure you put this AFTER Leaflet's CSS -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="crossorigin=""></script>
+<div id="map" style="width: 1000px; height: 1000px; position: relative; outline-style: none;"></div>
+<script>
+var map = L.map('map').setView([35.6712, 139.7811], 11);
+
+var greenIcon = L.icon({
+    iconUrl: 'logo_for_directory.jpeg',
+    shadowUrl: 'leaf-shadow.png',
+
+    iconSize:     [38, 95], // size of the icon
+    shadowSize:   [50, 64], // size of the shadow
+    iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
+    shadowAnchor: [4, 62],  // the same for the shadow
+    popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+});
+
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+}).addTo(map);
+
+var osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '© OpenStreetMap'
+});
+
+var osmHOT = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '© OpenStreetMap contributors, Tiles style by Humanitarian OpenStreetMap Team hosted by OpenStreetMap France'});
+
+var marker = L.marker([35.676888, 139.739648], {icon: greenIcon}).addTo(map).bindPopup("<b>Hola Yuuka</b><br>Esta es la embajada.");
+var marker2 = L.marker([41.7972222, 140.7569444]).addTo(map).bindPopup("<b>goryokaku</b><br>pentagos en sapporo");
+var marker3 = L.marker([41.4297222, 140.1083333]).addTo(map).bindPopup("<b>Castillo Matsumae (Castillo de Fukuyama)</b><br>");
+var marker4 = L.marker([40.6075, 140.4638888]).addTo(map).bindPopup("<b>Castillo Hirosaki</b><br>");
+var marker5 = L.marker([40.5061111, 141.4605555]).addTo(map).bindPopup("<b>Nejo</b><br>");
+var marker6 = L.marker([39.7005555, 141.15]).addTo(map).bindPopup("<b>castillo de morioka</b><br>");
+var marker7 = L.marker([38.3066666, 140.9883333]).addTo(map).bindPopup("<b>Tagajó</b><br>");
+var marker8 = L.marker([38.2530555, 140.8555555]).addTo(map).bindPopup("<b>Castillo de Sendai (Castillo de Aoba)</b><br>");
+var marker9 = L.marker([39.7227777, 140.1236111]).addTo(map).bindPopup("<b>Castillo de Kubota</b><br>");
+var marker10 = L.marker([38.2555555, 140.3283333]).addTo(map).bindPopup("<b>Castillo Yamagata</b><br>");
+var marker11 = L.marker([37.5994444, 140.4277777]).addTo(map).bindPopup("<b>Castillo Nihonmatsu (Kasumigajo)</b><br>");
+var marker12 = L.marker([37.4875, 139.9297222]).addTo(map).bindPopup("<b>Castillo Aizuwakamatsu</b><br>");
+var marker13 = L.marker([37.1325, 140.2133333]).addTo(map).bindPopup("<b>Castillo Shirakawa Komine</b><br>");
+var marker14 = L.marker([36.3752777, 140.4769444]).addTo(map).bindPopup("<b>castillo mito</b><br>");
+var marker15 = L.marker([36.3375, 139.4522222]).addTo(map).bindPopup("<b>Mansión del clan Ashikaga (templo Ban'a)</b><br>");
+var marker16 = L.marker([36.405, 138.9508333]).addTo(map).bindPopup("<b>Castillo Minowa</b><br>");
+var marker17 = L.marker([36.3169444, 139.3777777]).addTo(map).bindPopup("<b>Ciudad de Jinshan</b><br>");
+var marker18 = L.marker([36.1091666, 139.1958333]).addTo(map).bindPopup("<b>ciudad en forma de cuenco</b><br>");
+var marker19 = L.marker([35.9247222, 139.4913888]).addTo(map).bindPopup("<b>Castillo Kawagoe</b><br>");
+var marker20 = L.marker([35.7222222, 140.2158333]).addTo(map).bindPopup("<b>Castillo de Sakura</b><br>");
+var marker21 = L.marker([35.6872222, 139.7552777]).addTo(map).bindPopup("<b>castillo edo</b><br>");
+var marker22 = L.marker([35.6530555, 139.2527777]).addTo(map).bindPopup("<b>Castillo Hachioji</b><br>");
+var marker23 = L.marker([35.2513888, 139.1536111]).addTo(map).bindPopup("<b>Castillo de Odawara</b><br>");
+var marker24 = L.marker([35.6866666, 138.5766666]).addTo(map).bindPopup("<b>Museo del Clan Takeda (Santuario Takeda)</b><br>");
+var marker25 = L.marker([35.6652777, 138.5713888]).addTo(map).bindPopup("<b>Castillo de Kofu</b><br>");
+var marker26 = L.marker([36.5658333, 138.1958333]).addTo(map).bindPopup("<b>Castillo de Matsushiro</b><br>");
+var marker27 = L.marker([36.4036111, 138.2444444]).addTo(map).bindPopup("<b>Castillo de Ueda</b><br>");
+var marker28 = L.marker([36.3269444, 138.4169444]).addTo(map).bindPopup("<b>Xiaozhucheng</b><br>");
+var marker29 = L.marker([36.2386111, 137.9688888]).addTo(map).bindPopup("<b>Castillo de Matsumoto</b><br>");
+var marker30 = L.marker([35.8327777, 138.0625]).addTo(map).bindPopup("<b>Gao Yuan Cheng</b><br>");
+var marker31 = L.marker([37.9552777, 139.3252777]).addTo(map).bindPopup("<b>Castillo Shibata</b><br>");
+var marker32 = L.marker([37.1466666, 138.2055555]).addTo(map).bindPopup("<b>Castillo Kasugayama</b><br>");
+var marker33 = L.marker([36.7491666, 137.0208333]).addTo(map).bindPopup("<b>Castillo de Takaoka</b><br>");
+var marker34 = L.marker([37.0086111, 136.9838888]).addTo(map).bindPopup("<b>Castillo Nanao</b><br>");
+var marker35 = L.marker([36.5636111, 136.6594444]).addTo(map).bindPopup("<b>Castillo de Kanazawa</b><br>");
+var marker36 = L.marker([36.1519444, 136.2722222]).addTo(map).bindPopup("<b>Castillo de Maruoka</b><br>");
+var marker37 = L.marker([35.9958333, 136.3080555]).addTo(map).bindPopup("<b>Castillo Ichijodani</b><br>");
+var marker38 = L.marker([35.3597222, 137.4511111]).addTo(map).bindPopup("<b>Castillo Iwamura</b><br>");
+var marker39 = L.marker([35.4338888, 136.7822222]).addTo(map).bindPopup("<b>Castillo Gifu</b><br>");
+var marker40 = L.marker([35.1561111, 138.9919444]).addTo(map).bindPopup("<b>Castillo de Yamanaka</b><br>");
+var marker41 = L.marker([34.9791666, 138.3830555]).addTo(map).bindPopup("<b>Castillo Sunpu</b><br>");
+var marker42 = L.marker([34.775, 138.0138888]).addTo(map).bindPopup("<b>Castillo Kakegawa</b><br>");
+var marker43 = L.marker([35.3883333, 136.9391666]).addTo(map).bindPopup("<b>Castillo de Inuyama</b><br>");
+var marker44 = L.marker([35.1858333, 136.8994444]).addTo(map).bindPopup("<b>castillo de nagoya</b><br>");
+var marker45 = L.marker([34.9561111, 137.1588888]).addTo(map).bindPopup("<b>Castillo Okazaki</b><br>");
+var marker46 = L.marker([34.9227777, 137.5597222]).addTo(map).bindPopup("<b>Castillo Nagashino</b><br>");
+var marker47 = L.marker([34.77, 136.1272222]).addTo(map).bindPopup("<b>Castillo Iga Ueno</b><br>");
+var marker48 = L.marker([34.5758333, 136.5255555]).addTo(map).bindPopup("<b>Castillo Matsusaka</b><br>");
+var marker49 = L.marker([35.4588888, 136.2763888]).addTo(map).bindPopup("<b>Castillo Odari</b><br>");
+var marker50 = L.marker([35.2763888, 136.2516666]).addTo(map).bindPopup("<b>Castillo Hikone</b><br>");
+var marker51 = L.marker([35.1558333, 136.1391666]).addTo(map).bindPopup("<b>Castillo Azuchi</b><br>");
+var marker52 = L.marker([35.1458333, 136.1577777]).addTo(map).bindPopup("<b>Castillo Kanonji</b><br>");
+var marker53 = L.marker([35.0141666, 135.7477777]).addTo(map).bindPopup("<b>Castillo de Nijō</b><br>");
+var marker54 = L.marker([34.6875, 135.5258333]).addTo(map).bindPopup("<b>Castillo de Osaka</b><br>");
+var marker55 = L.marker([34.4169444, 135.6513888]).addTo(map).bindPopup("<b>Castillo Chihaya</b><br>");
+var marker56 = L.marker([35.3, 134.8288888]).addTo(map).bindPopup("<b>Castillo Takeda</b><br>");
+var marker57 = L.marker([35.0730555, 135.2175]).addTo(map).bindPopup("<b>Castillo de Sasayama</b><br>");
+var marker58 = L.marker([34.6525, 134.9916666]).addTo(map).bindPopup("<b>Castillo de Akashi</b><br>");
+var marker59 = L.marker([34.8394444, 134.6938888]).addTo(map).bindPopup("<b>castillo himeji</b><br>");
+var marker60 = L.marker([34.7458333, 134.3891666]).addTo(map).bindPopup("<b>Castillo de Ako</b><br>");
+var marker61 = L.marker([34.4291666, 135.8275]).addTo(map).bindPopup("<b>Castillo Takatori</b><br>");
+var marker62 = L.marker([34.2275, 135.1713888]).addTo(map).bindPopup("<b>Castillo de Wakayama</b><br>");
+var marker63 = L.marker([35.51, 134.2411111]).addTo(map).bindPopup("<b>Castillo de Totori</b><br>");
+var marker64 = L.marker([35.475, 133.0505555]).addTo(map).bindPopup("<b>Castillo Matsue</b><br>");
+var marker65 = L.marker([35.3608333, 133.1847222]).addTo(map).bindPopup("<b>Castillo Gassan Tomita</b><br>");
+var marker66 = L.marker([34.46, 131.7641666]).addTo(map).bindPopup("<b>Castillo Tsuwano</b><br>");
+var marker67 = L.marker([35.0627777, 134.005]).addTo(map).bindPopup("<b>Castillo Tsuyama</b><br>");
+var marker68 = L.marker([34.8088888, 133.6219444]).addTo(map).bindPopup("<b>Castillo Bitchu Matsuyama</b><br>");
+var marker69 = L.marker([34.7275, 133.7677777]).addTo(map).bindPopup("<b>Castillo Kinojo</b><br>");
+var marker70 = L.marker([34.665, 133.9361111]).addTo(map).bindPopup("<b>Castillo de Okayama</b><br>");
+var marker71 = L.marker([34.4908333, 133.3611111]).addTo(map).bindPopup("<b>Castillo de Fukuyama</b><br>");
+var marker72 = L.marker([34.6736111, 132.7094444]).addTo(map).bindPopup("<b>castillo de koriyama</b><br>");
+var marker73 = L.marker([34.4025, 132.4591666]).addTo(map).bindPopup("<b>castillo de hiroshima</b><br>");
+var marker74 = L.marker([34.1752777, 132.1741666]).addTo(map).bindPopup("<b>Castillo de Iwakuni</b><br>");
+var marker75 = L.marker([34.4213888, 131.3813888]).addTo(map).bindPopup("<b>Castillo de Hagi</b><br>");
+var marker76 = L.marker([34.0752777, 134.555]).addTo(map).bindPopup("<b>Castillo Tokushima</b><br>");
+var marker77 = L.marker([34.3502777, 134.0516666]).addTo(map).bindPopup("<b>Castillo Takamatsu</b><br>");
+var marker78 = L.marker([34.2861111, 133.8005555]).addTo(map).bindPopup("<b>Castillo de Marugame</b><br>");
+var marker79 = L.marker([34.0633333, 133.0069444]).addTo(map).bindPopup("<b>Castillo Imabari</b><br>");
+var marker80 = L.marker([33.8486111, 132.7863888]).addTo(map).bindPopup("<b>Tang Zhucheng</b><br>");
+var marker81 = L.marker([33.8455555, 132.7655555]).addTo(map).bindPopup("<b>ciudad de songshan</b><br>");
+var marker82 = L.marker([33.5094444, 132.5411111]).addTo(map).bindPopup("<b>ciudad de dazhou</b><br>");
+var marker83 = L.marker([33.2191666, 132.565]).addTo(map).bindPopup("<b>Castillo Uwajima</b><br>");
+var marker84 = L.marker([33.5608333, 133.5311111]).addTo(map).bindPopup("<b>Castillo de Cochín</b><br>");
+var marker85 = L.marker([33.5847222, 130.3830555]).addTo(map).bindPopup("<b>castillo de fukuoka</b><br>");
+var marker86 = L.marker([33.5397222, 130.5230555]).addTo(map).bindPopup("<b>Castillo de Ono</b><br>");
+var marker87 = L.marker([33.5302777, 129.8691666]).addTo(map).bindPopup("<b>Castillo de Nagoya</b><br>");
+
+var castillosT = L.layerGroup([marker, marker2, marker3, marker4, marker5]);
+
+var map = L.map('map', {
+    center: [39.73, -104.99],
+    zoom: 10,
+    layers: [osm, castillosT]
+});
+
+var baseMaps = {
+    "OpenStreetMap": osm,
+    "OpenStreetMap.HOT": osmHOT
+};
+
+var overlayMaps = {
+    "CastillosT": castillosT
+};
+
+var layerControl = L.control.layers(baseMaps, overlayMaps).addTo(map);
+
+var circle = L.circle([35.7012, 139.7611], {
+    color: 'red',
+    fillColor: '#f03',
+    fillOpacity: 0.5,
+    radius: 500
+}).addTo(map).bindPopup("I am a circle.");
+var polygon = L.polygon([
+    [35.6722, 139.7807],
+    [35.6712, 139.7809],
+    [35.6732, 139.7811]
+]).addTo(map);
+</script>
+<style>
+            html, body {
+                  height: 100%;
+                  margin: 0;
+            }
+            .leaflet-container {
+                  height: 100%;
+                  width: 100%;
+                  max-width: 100%;
+                  max-height: 100%;
+            }
+</style>
+</head>
+<body>
+</body>
+</html>
